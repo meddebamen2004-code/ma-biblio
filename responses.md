@@ -26,3 +26,7 @@ le message :  Une Column ne défile pas. Quand les éléments sont plus hauts qu
 #Q2.8: Sans Expanded, on a l'erreur "Vertical viewport was given unbounded height". La Column donne une hauteur infinie au ListView, donc Expanded lui donne l'espace restant
 
 #Q2.9: shrinkWrap donne au ListView la hauteur de son contenu et NeverScrollableScrollPhysics bloque son défilement. On l'utilise pour une petite liste dans une page qui défile déjà
+
+#3.1: StatelessWidget ne peut pas changer aprés sa creation, d'ou l'ecrant doit ce mettre a jour quand on coche une case  donc il faut un StatefulWidget avec setState.
+
+#3.2:si on oublie setState, la variable change mais l'écran n'est pas redessiné, donc la case ne se coche pas visuellement.

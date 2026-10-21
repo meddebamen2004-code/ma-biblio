@@ -3,6 +3,7 @@ import 'screens/parametres_screen.dart';
 import 'data/livres_data.dart';
 import 'widgets/livre_card.dart';
 import 'screens/catalogue_screen.dart';
+import 'screens/ma_liste_screen.dart';
 void main() {
   runApp(const MaBiblioApp());
 }
@@ -36,19 +37,31 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-  title: const Text('MaBiblio'),
-  actions: [
-    IconButton(
-      icon: const Icon(Icons.settings),
-      onPressed: () { Navigator.push(
-        context,MaterialPageRoute(builder: (_) => const ParametresScreen()),
-        );
-      },
-    ),
-  ],
-),
-
-     body: const CatalogueScreen(),
+        title: const Text('MaBiblio'),
+        actions: [
+          // Nouveau bouton : ouvre Ma liste
+          IconButton(
+            icon: const Icon(Icons.checklist),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const MaListeScreen()),
+              );
+            },
+          ),
+          // Bouton existant : ouvre Paramètres
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const ParametresScreen()),
+              );
+            },
+          ),
+        ],
+      ),
+      body: const CatalogueScreen(),
     );
   }
 }

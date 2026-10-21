@@ -59,14 +59,13 @@ class CatalogueScreen extends StatelessWidget {
 
 
         
-        // Q2.5 : ListView(children) construit tous les éléments d'un coup, même ceux qu'on ne voit pas. 
-        //ListView.builder ne construit que les éléments visibles, donc il reste fluide avec 1 000 livres.
-        ListView.separated(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: livres.length,
-          itemBuilder: (context, index) => livreTile(livres[index]),
-          separatorBuilder: (context, index) => const Divider(indent: 72),
+        // Q2.5 : ListView(children) construit tous les éléments d'un coup, même ceux qu'on ne voit pas. ListView.builder ne construit que les éléments visibles, donc il reste fluide avec 1 000 livres.
+        Expanded(
+          child: ListView.separated(
+            itemCount: livres.length,
+            itemBuilder: (context, index) => livreTile(livres[index]),
+            separatorBuilder: (context, index) => const Divider(indent: 72),
+          ),
         ),
       ],
     );
