@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/livre.dart';
-
+import '../screens/detail_screen.dart';
 Widget livreTile(Livre livre) {
   return ListTile(
     leading: CircleAvatar(
@@ -20,4 +20,31 @@ Widget livreTile(Livre livre) {
       ],
     ),
   );
+  
+}
+class LivreCard extends StatelessWidget {
+  final Livre livre;
+
+  const LivreCard({super.key, required this.livre});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 4,
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => DetailScreen(livre: livre)),
+          );
+        },
+        child: livreTile(livre),
+      ),
+    );
+  }
 }

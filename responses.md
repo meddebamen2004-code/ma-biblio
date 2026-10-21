@@ -30,3 +30,9 @@ le message :  Une Column ne défile pas. Quand les éléments sont plus hauts qu
 #3.1: StatelessWidget ne peut pas changer aprés sa creation, d'ou l'ecrant doit ce mettre a jour quand on coche une case  donc il faut un StatefulWidget avec setState.
 
 #3.2:si on oublie setState, la variable change mais l'écran n'est pas redessiné, donc la case ne se coche pas visuellement.
+
+#Q4.2 il ya un ombre au dessous les listes
+
+#4.3: le color change la couleur de fond de la carte, alors que surfaceTintColor ajoute une teinte par-dessus la couleur de base
+
+#4.5: si on supprime clipBehavior, il déborde des coins arrondis. Avec Clip.antiAlias, just la forme de la carte est coupé proprement.
