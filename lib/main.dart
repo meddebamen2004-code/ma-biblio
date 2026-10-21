@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/parametres_screen.dart';
 import 'data/livres_data.dart';
 import 'widgets/livre_card.dart';
+import 'screens/catalogue_screen.dart';
 void main() {
   runApp(const MaBiblioApp());
 }
@@ -47,9 +48,7 @@ class _HomePageState extends State<HomePage> {
   ],
 ),
 
-      body: Column(
-        children: livres.take(3).map((l) => livreTile(l)).toList(),
-        ),
+     body: const CatalogueScreen(),
     );
   }
 }

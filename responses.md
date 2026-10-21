@@ -15,3 +15,14 @@ enabled: il devient plus visible, le texte et l'icone deviennent gris
 
  //pourquoi un ListTile doit-il être placé dans un parent à largeur contrainte ?
  car un ListTile répartit lui-même l'espace horizontal entre leading, title, subtitle et trailing. 
+
+ #Q2.1
+le message :  Une Column ne défile pas. Quand les éléments sont plus hauts que l’écran, ils débordent et Flutter affiche la bande jaune et noire
+
+#2.3 avec Divider()un trait sépare chaque ligne et avec ListTile.divideTiles(context: context, tiles: [...]).toList() il sont automatiquement ajouter il ne faut pas les aujouter par main aprés chaque list
+
+#Q2.5 : ListView(children) construit tous les éléments d'un coup, même ceux qu'on ne voit pas. ListView.builder ne construit que les éléments visibles, donc il reste fluide avec 1 000 livres
+
+#Q2.8: Sans Expanded, on a l'erreur "Vertical viewport was given unbounded height". La Column donne une hauteur infinie au ListView, donc Expanded lui donne l'espace restant
+
+#Q2.9: shrinkWrap donne au ListView la hauteur de son contenu et NeverScrollableScrollPhysics bloque son défilement. On l'utilise pour une petite liste dans une page qui défile déjà
