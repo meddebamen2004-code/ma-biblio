@@ -35,4 +35,10 @@ le message :  Une Column ne défile pas. Quand les éléments sont plus hauts qu
 
 #4.3: le color change la couleur de fond de la carte, alors que surfaceTintColor ajoute une teinte par-dessus la couleur de base
 
-#4.5: si on supprime clipBehavior, il déborde des coins arrondis. Avec Clip.antiAlias, just la forme de la carte est coupé proprement.
+#4.5: si on supprime clipBehavior, il déborde des coins arrondis. Avec Clip.antiAlias, just la forme de la carte est coupé proprement
+
+#5.3: le 0.7 at plus haut, donc c'est lui qui donne le cases de livres
+
+#5.4: crossAxisCount conte les ligne pas les collogne si en ajoute "scrollDirection: Axis.horizontal,"
+
+#5.6: Avec GridView.extent, le nombre de colonnes change selon la largeur de l’écran. Avec GridView.count, le nombre de colonnes est fixe et ce sont les cases qui s’agrandissent ou rétrécissent.

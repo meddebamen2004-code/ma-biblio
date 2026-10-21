@@ -4,6 +4,7 @@ import 'data/livres_data.dart';
 import 'widgets/livre_card.dart';
 import 'screens/catalogue_screen.dart';
 import 'screens/ma_liste_screen.dart';
+import 'screens/galerie_screen.dart';
 void main() {
   runApp(const MaBiblioApp());
 }
@@ -51,14 +52,14 @@ class _HomePageState extends State<HomePage> {
           ),
           // Bouton existant : ouvre Paramètres
           IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const ParametresScreen()),
-              );
-            },
-          ),
+          icon: const Icon(Icons.grid_on),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const GalerieScreen()),
+            );
+  },
+),
         ],
       ),
       body: const CatalogueScreen(),
